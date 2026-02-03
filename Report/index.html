@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Create New Listing | Lost & Found – University of Phayao</title>
+<link rel="stylesheet" href="/Report/index.css">
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="/icons/web icon.png">
+      <a href="/Landing Page/index 1.html">Lost & Found<br>University of Phayao</a>
+    </div>
+
+    <nav class="nav-links">
+      <div class="nav-item"><img src="/icons/checklist.png"><a href="/Search/index.html">Browsing Lists</a></div>
+      <div class="nav-item"><img src="/icons/create-list.png"><a href="/Report/index.html">Create Listing</a></div>
+      <div class="nav-item">
+        <img src="/icons/log-in.png"><a href="/Log in/index.html">Log in</a>
+      </div>
+      <div class="icon-btn"><img src="/icons/internet.png"></div>
+      <div class="language">
+        <select><option>English</option><option>Thai</option></select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="card">
+    
+    <div class="page-title">
+      <img src="/icons/information-button.png">
+      <h1>Create New Listing</h1>
+    </div>
+
+    <!-- TYPE -->
+    <div class="group">
+      <div class="label">Type <span class="req">*</span></div>
+      <div class="type-row">
+        <label class="type-pill">
+          <input type="radio" name="type">
+          <span class="pill lost">Lost</span>
+        </label>
+        <label class="type-pill">
+          <input type="radio" name="type">
+          <span class="pill found">Found</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="label">Category <span class="req">*</span></div>
+      <select>
+        <option>Select a Category</option>
+      </select>
+      <div class="hint">
+        This will be displayed on the listing detail page to inform other users.
+      </div>
+    </div>
+
+    <div class="group">
+      <div class="label">Item Title <span class="req">*</span></div>
+      <input placeholder="e.g., Black iPhone 14 Pro">
+    </div>
+
+    <div class="group">
+      <div class="label">Description <span class="req">*</span></div>
+      <textarea placeholder="Provide detailed description including color, brand, distinctive features..."></textarea>
+    </div>
+
+    <div class="group">
+      <div class="label">Extra Reward</div>
+      <div class="icon-input">
+        <span>฿</span>
+        <input placeholder="e.g., 15000">
+      </div>
+      <div class="hint">Leave blank in case not interest to put reward</div>
+    </div>
+
+    <div class="group">
+      <div class="label">Location <span class="req">*</span></div>
+      <input placeholder="Last seen place">
+    </div>
+
+    <div class="group">
+      <div class="label">Date <span class="req">*</span></div>
+      <input placeholder="DD/MM/YYYY">
+    </div>
+
+    <div class="group">
+      <div class="label">Tags <span class="req">*</span></div>
+      <input placeholder="e.g., Mobile, ID card, Keys...">
+      <div class="hint">
+        Separate tag by press the “Enter key (↵)”, must not exceed 15 tags
+      </div>
+    </div>
+
+
+
+    <!-- REPORTER -->
+    <div class="section">
+      <div class="section-header">
+        <img src="/icons/information-button.png">
+        <strong>Reporter information</strong>
+      </div>
+
+      <div class="group">
+        <div class="label">Email <span class="req">*</span></div>
+        <div class="icon-input">
+          <span><img src="/icons/mail.png" width="18"></span>
+          <input placeholder="Email Address">
+        </div>
+      </div>
+
+      <div class="group">
+        <div class="label">Phone Number <span class="req">*</span></div>
+        <input placeholder="Insert phone number">
+      </div>
+
+      <div class="group">
+        <div class="label">Other Contact <span style="font-weight:400;color:var(--muted)">(Optional)</span></div>
+        <div class="contacts">
+          <div class="contact"><img src="/icons/facebook.png"><input placeholder="Facebook"></div>
+          <div class="contact"><img src="/icons/line.png"><input placeholder="Line"></div>
+          <div class="contact"><img src="/icons/instagram.png"><input placeholder="Instagram"></div>
+          <div class="contact"><img src="/icons/telegram.png"><input placeholder="Telegram"></div>
+          <div class="contact"><img src="/icons/x.png"><input placeholder="X"></div>
+          <div class="contact"><img src="/icons/snapchat.png"><input placeholder="Snapchat"></div>
+          <div class="contact"><img src="/icons/linkedin.png"><input placeholder="LinkedIn"></div>
+          <div class="contact"><img src="/icons/wechat.png"><input placeholder="Wechat"></div>
+        </div>
+      </div>
+
+      <div class="group">
+      <div class="label">Photo <span style="font-weight:400;color:var(--muted)">(Optional)</span></div>
+
+      <div class="upload" id="uploadBox">
+        <input type="file" id="photoInput" accept="image/*" hidden>
+
+        <div class="upload-text">
+          <img src="/icons/upload.png"><br>
+          Click to upload image or drag & drop
+        </div>
+
+        <img id="photoPreview" class="photo-preview">
+      </div>
+    </div>
+    </div>
+
+    <button>Submit Report</button>
+  </div>
+</main>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-brand-title">
+        <img src="/icons/web icon.png" alt="logo">
+        <a href="/Landing Page/index 1.html">
+          <h2>Lost & Found<br>University of Phayao</h2>
+        </a>
+      </div>
+
+      <small>CONTACT US ON</small>
+
+      <div class="social">
+        <img src="/icons/gmail.png" alt="facebook">
+        <h1>Jiraphong.Kafae@gmail.com</h1>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="/Terns and Sevices/index.html">Terms & Services</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="/Landing Page/index 1.html">Home Page</a></li>
+        <li><a href="/Search/index.html">Browsing Lists</a></li>
+        <li><a href="/Report/index.html">Create Listing</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="/Account/index.html">Account</a></li>
+        <li><a href="/Log in/index.html">Log in</a></li>
+        <li><a href="/Register/index.html">Register</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    lostandfounduniversityofphayao.com. All rights reserved. © 2025
+  </div>
+
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Browse Listings | Lost & Found – University of Phayao</title>
+<link rel="stylesheet" href="/Search/index.css">
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="/icons/web icon.png">
+      <a href="/Landing Page/index 1.html">Lost & Found<br>University of Phayao</a>
+    </div>
+
+    <nav class="nav-links">
+      <div class="nav-item"><img src="/icons/checklist.png"><a href="/Search/index.html">Browsing Lists</a></div>
+      <div class="nav-item"><img src="/icons/create-list.png"><a href="/Report/index.html">Create Listing</a></div>
+      <div class="nav-item">
+        <img src="/icons/log-in.png"><a href="/Log in/index.html">Log in</a>
+      </div>
+      <div class="icon-btn"><img src="/icons/internet.png"></div>
+      <div class="language">
+        <select><option>English</option><option>Thai</option></select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="filter-wrapper">
+  <div class="filter-box">
+    <div class="filter-title">
+      <img src="/icons/filter.png">Filter Items
+    </div>
+    <div class="filter-grid">
+      <div class="filter-field">
+        <label><img src="/icons/search.png">Search</label>
+        <input placeholder="Search by title, description, or location">
+      </div>
+      <div class="filter-field">
+        <label><img src="/icons/types.png">Type</label>
+        <select><option>All Items</option><option>Lost</option><option>Found</option></select>
+      </div>
+      <div class="filter-field">
+        <label><img src="/icons/category.png">Category</label>
+        <select>
+          <option>All</option>
+          <option>Electronics</option>
+          <option>Bags</option>
+          <option>Personal Items</option>
+          <option>Bags</option>
+          <option>Clothing</option>
+          <option>Stationery</option>
+          <option>Electronics</option>
+          <option>Valuables</option>
+          <option>Documents</option>
+          <option>Others</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Tabs -->
+<div class="tabs">
+  <div class="tab active">All Listings <span class="badge all">49</span></div>
+  <div class="tab">Lost <span class="badge lost">41</span></div>
+  <div class="tab">Found <span class="badge found">8</span></div>
+</div>
+
+<!-- Breadcrumb + Sort -->
+<div class="topbar">
+  <div class="breadcrumb">
+    <img src="/icons/home-icon-silhouette.png">
+    <span>/ All Listings /</span>
+  </div>
+  <div class="sort">
+    <select>
+      <option>Price: Low to High</option>
+      <option>Price: High to Low</option>
+      <option>Date: Latest</option>
+      <option>Date: Oldest</option>
+    </select>
+  </div>
+</div>
+
+<main class="container">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="filter-group">
+      <div class="filter-title">ALL LISTINGS</div>
+      <ul class="filter-list">
+        <li>Personal Items</li>
+        <li>Bags</li>
+        <li>Clothing</li>
+        <li>Stationery</li>
+        <li>Electronics</li>
+        <li>Valuables</li>
+        <li>Documents</li>
+        <li>Others</li>
+      </ul>
+    </div>
+
+    <div class="filter-group">
+  <details open>
+    <summary class="filter-title">University Area</summary>
+    <ul class="filter-list">
+      <li>University of Phayao Gate 1</li>
+      <li>University of Phayao Gate 2</li>
+      <li>University of Phayao Gate 3</li>
+      <li>Phaya Ngam Muang Auditorium</li>
+      <li>Ang Luang Reservoir</li>
+      <li>Sufficiency Economy Learning Center</li>
+      <li>Phra Buddha Phusha Ka Raksa</li>
+      <li>Fitness and Recreation Facilities</li>
+      <li>University of Phayao Basketball Court</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary class="filter-title">Schools & Faculties</summary>
+    <ul class="filter-list">
+      <li>School of Medecine</li>
+      <li>School of Dentistry</li>
+      <li>School of Engineer</li>
+      <li>School of Allied Health Sciences</li>
+      <li>School of Architecture And Fine Art</li>
+      <li>School of Engergy and Environment</li>
+      <li>School of Public Health</li>
+      <li>School of Pharmaceutical Sciences</li>
+      <li>School of Nurse</li>
+      <li>School of Agriculture and Natural Resources </li>
+      <li>School of Science</li>
+      <li>School of Medical Sciences</li>
+      <li>School of Liberal Arts</li>
+      <li>School of Information and Communication Technology</li>
+      <li>School of Law</li>
+      <li>School of Political and Social Sciences</li>
+      <li>School of Education</li>
+      <li>School of Business and Communication Arts</li>
+      <li>Bachelor of Traditional Chinese Medicine Program</li>
+    </ul>
+  </details>
+
+  <details>
+    <summary class="filter-title">Institutes & Buildings</summary>
+    <ul class="filter-list">
+      <li>Up Dorm</li>
+      <li>Innovative Learning Institute</li>
+      <li>Center Education Building : CE</li>
+      <li>Office of The President</li>
+      <li>Phra Ubalikhunupamachan 99th Anniversary Building</li>
+      <li>Sanguan Sermsri Building</li>
+      <li>Demonstration School, University of Phayao</li>
+    </ul>
+  </details>
+</div>
+
+    <div class="filter-group">
+      <div class="filter-title">DATE POSTED</div>
+      <div class="filter-list">
+        <label><input type="radio" name="date"> 3 days ago</label>
+        <label><input type="radio" name="date"> 1 week ago</label>
+        <label><input type="radio" name="date"> 1 month ago</label>
+        <label><input type="radio" name="date"> 6 months ago</label>
+        <label><input type="radio" name="date"> 1 year ago</label>
+      </div>
+    </div>
+
+    <div class="filter-group">
+      <div class="filter-title">PRICE RANGE</div>
+      <div class="filter-list">
+        <label><input type="radio" name="price"> No reward</label>
+        <label><input type="radio" name="price"> 1 – 500 BATH</label>
+        <label><input type="radio" name="price"> 501 – 1000 BATH</label>
+        <label><input type="radio" name="price"> More than 1000 BATH</label>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Content -->
+  <section class="content">
+    <h2>All Listings</h2>
+
+    <div class="grid">
+
+      <!-- CARD -->
+    <div class="card" data-id="item-1" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/bookmark.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+      <!-- CARD -->
+    <div class="card" data-id="item-2" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/bookmark.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+      <!-- CARD -->
+    <div class="card" data-id="item-3" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body" >
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/bookmark.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>  
+
+    </div>
+
+    <div class="pagination">
+      <div class="page active" onclick="goPage(1)">1</div>
+      <div class="page" onclick="goPage(2)">2</div>
+      <div class="page" onclick="goPage(3)">3</div>
+      <div class="page" onclick="goPage(4)">4</div>
+    </div>
+
+  </section>
+</main>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-brand-title">
+        <img src="/icons/web icon.png" alt="logo">
+        <a href="/Landing Page/index 1.html">
+          <h2>Lost & Found<br>University of Phayao</h2>
+        </a>
+      </div>
+
+      <small>CONTACT US ON</small>
+
+      <div class="social">
+        <img src="/icons/gmail.png" alt="facebook">
+        <h1>Jiraphong.Kafae@gmail.com</h1>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="/Terns and Sevices/index.html">Terms & Services</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="/Landing Page/index 1.html">Home Page</a></li>
+        <li><a href="/Search/index.html">Browsing Lists</a></li>
+        <li><a href="/Report/index.html">Create Listing</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="/Account/index.html">Account</a></li>
+        <li><a href="/Log in/index.html">Log in</a></li>
+        <li><a href="/Register/index.html">Register</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    lostandfounduniversityofphayao.com. All rights reserved. © 2025
+  </div>
+
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <img id="modalImg">
+    <div class="modal-body">
+      <div class="modal-title-row">
+        <h3 id="modalTitle"></h3>
+        <span id="modalStatus" class="status"></span>
+        <img src="/icons/marketing.png" class="report-icon"
+        onclick="event.stopPropagation(); openReport();">
+      </div>
+      <span class="category" id="modalCategory"></span>
+      <p class="desc" id="modalDesc"></p>
+
+
+      <div class="info"><img src="/icons/location.png">Found Place</div>
+      <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+      <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+     
+      
+      <div class="modal-types">
+        <h4>Contacts</h4>
+        <select class="types">
+          <option>Lost</option>
+          <option>Found</option>
+          <option>Clue</option>
+        </select>
+        <img
+          src="/icons/bookmark.png"
+          class="bookmark-icon"
+          id="modalBookmark"
+          onclick="toggleBookmark(event, this)"
+        >
+        </div>
+      
+      <hr style="margin:1rem 0">
+      <h2>Choose atleast 1 to request contact</h2>
+
+      <div class="contacts">
+        <label class="contact"><input type="checkbox"><img src="/icons/facebook.png">facebook.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/line.png">line.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/instagram.png">instagram.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/telegram.png">telegram.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/x.png">x.com</label>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary" style="cursor: pointer;">Request</button>
+        <button class="btn btn-cancel"style="cursor: pointer;" onclick="closeModal()" >Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= REPORT MODAL ================= -->
+<div class="modal-overlay" id="reportOverlay">
+  <div class="report-modal">
+    <div class="report-header">
+      <h3>Report</h3>
+      <button class="report-close" onclick="closeReport()">✕</button>
+    </div>
+
+    <div class="report-body">
+      <label><input type="checkbox"> Inappropriate</label>
+      <label><input type="checkbox"> False Information</label>
+      <label><input type="checkbox"> Sexual Content</label>
+      <label><input type="checkbox"> Hate Spreading</label>
+      <label><input type="checkbox"> Spam</label>
+      <label><input type="checkbox"> Others Reasons</label>
+    </div>
+
+    <div class="report-actions">
+      <button class="btn-report">Report</button>
+      <button class="btn-cancel" onclick="closeReport()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+<script src="/Search/index.js"></script>
+</html>

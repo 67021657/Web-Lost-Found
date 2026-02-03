@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notifications | Lost & Found – University of Phayao</title>
+<link rel="stylesheet" href="/Notification/index.css">
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="/icons/web icon.png">
+      <a href="/Landing Page/index 1.html">Lost & Found<br>University of Phayao</a>
+    </div>
+
+    <nav class="nav-links">
+      <div class="nav-item"><img src="/icons/checklist.png"><a href="/Search/index.html">Browsing Lists</a></div>
+      <div class="nav-item"><img src="/icons/create-list.png"><a href="/Report/index.html">Create Listing</a></div>
+      <div class="nav-item">
+        <img src="/icons/log-in.png"><a href="/Log in/index.html">Log in</a>
+      </div>
+      <div class="icon-btn"><img src="/icons/internet.png"></div>
+      <div class="language">
+        <select><option>English</option><option>Thai</option></select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h4>My Listings</h4>
+    <ul>
+      <li><img src="/icons/checklist.png"><a href="/My Listings/index.html">My Listings</a></li>
+      <li><img src="/icons/bookmark.png"><a href="/Favorites/index.html">Favorite Listings</a></li>
+      <li  class="active"><img src="/icons/bell.png"><a href="/Notification/index.html">Notifications</a></li>
+    </ul>
+
+    <h4>My Account</h4>
+    <ul>
+      <li><img src="/icons/user.png"><a href="/Account/index.html">My Account</a></li>
+      <li><img src="/icons/logout.png"><a href="/Log in/index.html">Log out</a></li>
+      <li><img src="/icons/cross.png"><a href="/Close Account/index.html">Close Account</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+    <section class="main-card">
+    <div class="main-header">
+      <img src="/icons/bell.png" alt="">
+      <h1>
+          Notification
+      </h1>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <label><input type="checkbox"> Select All</label>
+        <img src="/icons/book.png" alt="">
+        <span style="cursor: pointer;">Read All</span>
+        <img src="/icons/bin.png" alt="">
+        <span style="cursor: pointer;">Delete</span>
+      </div>
+      <div class="toolbar-right">
+        Search <input type="text">
+      </div>
+    </div>
+
+    <!-- Notification 1 -->
+  <div class="notice">
+
+    <input type="checkbox">
+
+    <div class="user-box">
+      <div class="avatar"></div>
+      <div>
+        <h3>Username</h3>
+        <p>someone@example.com</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="user-info">
+      <div><strong>Name :</strong> John Doe</div>
+      <div><strong>Gender :</strong> Male</div>
+      <div><strong>Phone :</strong> xxxxxxxxxx</div>
+    </div>
+
+    <div class="social-box">
+      <div class="social-row">
+        <img src="/icons/facebook.png"> facebook.com
+      </div>
+      <div class="social-row">
+        <img src="/icons/instagram.png"> instagram.com
+      </div>
+      <div class="social-row">
+        <img src="/icons/x.png"> x.com
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="item">
+      <img src="/icons/yeti-test.png">
+      <div>
+        <h4>My Yeti Cup</h4>
+        <p>Status : Found</p>
+        <p>Contact : Facebook</p>
+        <div class="actions">
+          <button class="accept">Accept</button>
+          <button class="reject">Reject</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Notification 2 -->
+  <div class="notice">
+
+    <input type="checkbox">
+
+    <div class="user-box">
+      <div class="avatar">
+        <img src="/icons//yeti-test.png" alt="">
+      </div>
+      <div>
+        <h3>Username</h3>
+        <p>someone@example.com</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="user-info">
+      <div><strong>Name :</strong> Mark Doe</div>
+      <div><strong>Gender :</strong> Male</div>
+      <div><strong>Phone :</strong> xxxxxxxxxx</div>
+    </div>
+
+    <div class="social-box">
+      <div class="social-row">
+        <img src="/icons/facebook.png"> facebook.com
+      </div>
+      <div class="social-row">
+        <img src="/icons/instagram.png"> instagram.com
+      </div>
+      <div class="social-row">
+        <img src="/icons/x.png"> x.com
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="item">
+      <img src="/icons/yeti-test.png">
+      <div>
+        <h4>Shoulder Bag</h4>
+        <p>Status : Found</p>
+        <p>Contact : Facebook</p>
+        <div class="actions">
+          <button class="accept">Accept</button>
+          <button class="reject">Reject</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+    <div class="pagination">
+      <div class="page active" onclick="goPage(1)">1</div>
+      <div class="page" onclick="goPage(2)">2</div>
+      <div class="page" onclick="goPage(3)">3</div>
+      <div class="page" onclick="goPage(4)">4</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-brand-title">
+        <img src="/icons/web icon.png" alt="logo">
+        <a href="/Landing Page/index 1.html">
+          <h2>Lost & Found<br>University of Phayao</h2>
+        </a>
+      </div>
+
+      <small>CONTACT US ON</small>
+
+      <div class="social">
+        <img src="/icons/gmail.png" alt="facebook">
+        <h1>Jiraphong.Kafae@gmail.com</h1>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="/Terns and Sevices/index.html">Terms & Services</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="/Landing Page/index 1.html">Home Page</a></li>
+        <li><a href="/Search/index.html">Browsing Lists</a></li>
+        <li><a href="/Report/index.html">Create Listing</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="/Account/index.html">Account</a></li>
+        <li><a href="/Log in/index.html">Log in</a></li>
+        <li><a href="/Register/index.html">Register</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    lostandfounduniversityofphayao.com. All rights reserved. © 2025
+  </div>
+
+</footer>
+
+</body>
+
+<script src="/Notification/index.js"></script>
+
+</html>

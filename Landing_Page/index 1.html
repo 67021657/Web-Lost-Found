@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lost & Found | University of Phayao</title>
+<link rel="stylesheet" href="/Landing Page/index.css">
+
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="/icons/web icon.png">
+      <a href="/Landing Page/index 1.html">Lost & Found<br>University of Phayao</a>
+    </div>
+
+    <nav class="nav-links">
+      <div class="nav-item"><img src="/icons/checklist.png"><a href="/Search/index.html">Browsing Lists</a></div>
+      <div class="nav-item"><img src="/icons/create-list.png"><a href="/Report/index.html">Create Listing</a></div>
+      <div class="nav-item">
+        <img src="/icons/log-in.png"><a href="/Log in/index.html">Log in</a>
+      </div>
+      <div class="icon-btn"><img src="/icons/internet.png"></div>
+      <div class="language">
+        <select><option>English</option><option>Thai</option></select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Lost or Found</h1>
+    <h2>something today?</h2>
+    <p>report it here to help people reunion with their love stuffs</p>
+    <p>and let people find your missing things!</p>
+    <a class="btn" href= "/Report/index.html">Report</a>
+    
+  </div>
+</section>
+
+<div class="filter-wrapper">
+  <div class="filter-box">
+    <div class="filter-title">
+      <img src="/icons/filter.png">Filter Items
+    </div>
+    <div class="filter-grid">
+      <div class="filter-field">
+        <label><img src="/icons/search.png">Search</label>
+        <input placeholder="Search by title, description, or location">
+      </div>
+      <div class="filter-field">
+        <label><img src="/icons/types.png">Type</label>
+        <select><option>All Items</option><option>Lost</option><option>Found</option></select>
+      </div>
+      <div class="filter-field">
+        <label><img src="/icons/category.png">Category</label>
+        <select><option>All</option><option>Electronics</option><option>Bags</option></select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <div class="section-header">
+    <h2>Latest Reports</h2>
+    <div class="view-more"><a href="/Search/index.html">view more ≡</a></div>
+  </div>
+
+  <div class="grid">
+
+    <!-- CARD -->
+    <div class="card" data-id="item-1" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/bookmark.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+    <div class="card" data-id="item-2" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/bookmark.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+
+  <div class="card" data-id="item-3" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/bookmark.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-brand-title">
+        <img src="/icons/web icon.png" alt="logo">
+        <a href="/Landing Page/index 1.html">
+          <h2>Lost & Found<br>University of Phayao</h2>
+        </a>
+      </div>
+
+      <small>CONTACT US ON</small>
+
+      <div class="social">
+        <img src="/icons/gmail.png" alt="facebook">
+        <h1>Jiraphong.Kafae@gmail.com</h1>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="/Terns and Sevices/index.html">Terms & Services</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="/Landing Page/index 1.html">Home Page</a></li>
+        <li><a href="/Search/index.html">Browsing Lists</a></li>
+        <li><a href="/Report/index.html">Create Listing</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="/Account/index.html">Account</a></li>
+        <li><a href="/Log in/index.html">Log in</a></li>
+        <li><a href="/Register/index.html">Register</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    lostandfounduniversityofphayao.com. All rights reserved. © 2025
+  </div>
+
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <img id="modalImg">
+    <div class="modal-body">
+      <div class="modal-title-row">
+        <h3 id="modalTitle"></h3>
+        <span id="modalStatus" class="status"></span>
+        <img src="/icons/marketing.png" class="report-icon"
+        onclick="event.stopPropagation(); openReport();">
+      </div>
+      <span class="category" id="modalCategory"></span>
+      <p class="desc" id="modalDesc"></p>
+
+
+      <div class="info"><img src="/icons/location.png">Found Place</div>
+      <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+      <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+     
+      
+      <div class="modal-types">
+        <h4>Contacts</h4>
+        <select class="types">
+          <option>Lost</option>
+          <option>Found</option>
+          <option>Clue</option>
+        </select>
+        <img
+          src="/icons/bookmark.png"
+          class="bookmark-icon"
+          id="modalBookmark"
+          onclick="toggleBookmark(event, this)"
+        >
+        </div>
+      
+      <hr style="margin:1rem 0">
+      <h2>Choose atleast 1 to request contact</h2>
+
+      <div class="contacts">
+        <label class="contact"><input type="checkbox"><img src="/icons/facebook.png">facebook.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/line.png">line.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/instagram.png">instagram.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/telegram.png">telegram.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/x.png">x.com</label>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary" style="cursor: pointer;">Request</button>
+        <button class="btn btn-cancel"style="cursor: pointer;" onclick="closeModal()" >Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= REPORT MODAL ================= -->
+<div class="modal-overlay" id="reportOverlay">
+  <div class="report-modal">
+    <div class="report-header">
+      <h3>Report</h3>
+      <button class="report-close" onclick="closeReport()">✕</button>
+    </div>
+
+    <div class="report-body">
+      <label><input type="checkbox"> Inappropriate</label>
+      <label><input type="checkbox"> False Information</label>
+      <label><input type="checkbox"> Sexual Content</label>
+      <label><input type="checkbox"> Hate Spreading</label>
+      <label><input type="checkbox"> Spam</label>
+      <label><input type="checkbox"> Others Reasons</label>
+    </div>
+
+    <div class="report-actions">
+      <button class="btn-report">Report</button>
+      <button class="btn-cancel" onclick="closeReport()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+<script src="/Landing Page/index.js"></script>
+</html>
