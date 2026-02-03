@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Listings | Lost & Found – University of Phayao</title>
+<link rel="stylesheet" href="/Admin Favorites/index.css">
+
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="/icons/web icon.png">
+      <a href="/Admin Page/index.html">Lost & Found<br>University of Phayao</a>
+    </div>
+
+    <nav class="nav-links">
+      <div class="nav-item"><img src="/icons/checklist.png"><a href="/Admin Search/index.html">Browsing Lists</a></div>
+      <div class="nav-item"><img src="/icons/create-list.png"><a href="/Admin Report/index.html">Create Listing</a></div>
+      <div class="nav-item">
+        <img src="/icons/log-in.png"><a href="/Admin Log in/index.html">Log in</a>
+      </div>
+      <div class="icon-btn"><img src="/icons/internet.png"></div>
+      <div class="language">
+        <select><option>English</option><option>Thai</option></select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h4>My Listings</h4>
+    <ul>
+      <li><img src="/icons/checklist.png"><a href="/Admin My Listings/index.html">My Listings</a></li>
+      <li class="active"><img src="/icons/bookmark.png"><a href="/Admin Favorites/index.html">Favorite Listings</a></li>
+      <li><img src="/icons/bell.png"><a href="/Admin Notification/index.html">Notifications</a></li>
+      <li><img src="/icons/stamp.png"><a href="/Admin Approve/index.html">Posts Approval</a></li>
+    </ul>
+
+    <h4>My Account</h4>
+    <ul>
+      <li><img src="/icons/user.png"><a href="/Admin Account/index.html">My Account</a></li>
+      <li><img src="/icons/logout.png"><a href="/Admin Log in/index.html">Log out</a></li>
+      <li><img src="/icons/cross.png"><a href="/Admin Close Account/index.html">Close Account</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <section class="main-card">
+    <div class="main-header">
+      <img src="/icons/megaphone.png" alt="">
+      <h1>
+          Favorite Listings
+      </h1>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <label><input type="checkbox"> Select All</label>
+        <img src="/icons/bin.png" alt="">
+        <span style="cursor: pointer;">Delete</span>
+      </div>
+      <div class="toolbar-right">
+        Search <input type="text">
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <!-- CARD -->
+    <div class="card" onclick="openModal(this)">
+      <div class="admin-delete">✕</div>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/Favorite.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+      <!-- CARD -->
+    <div class="card" onclick="openModal(this)">
+      <div class="admin-delete">✕</div>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/Favorite.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+      <!-- CARD -->
+    <div class="card" onclick="openModal(this)">
+      <div class="admin-delete">✕</div>
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/Favorite.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+    </div>
+
+    <div class="pagination">
+      <div class="page active" onclick="goPage(1)">1</div>
+      <div class="page" onclick="goPage(2)">2</div>
+      <div class="page" onclick="goPage(3)">3</div>
+      <div class="page" onclick="goPage(4)">4</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-brand-title">
+        <img src="/icons/web icon.png" alt="logo">
+        <a href="/Landing Page/index 1.html">
+          <h2>Lost & Found<br>University of Phayao</h2>
+        </a>
+      </div>
+
+      <small>CONTACT US ON</small>
+
+      <div class="social">
+        <img src="/icons/gmail.png" alt="facebook">
+        <h1>Jiraphong.Kafae@gmail.com</h1>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="/Admin Terns and Sevices/index.html">Terms & Services</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="/Admin Page/index.html">Home Page</a></li>
+        <li><a href="/Admin Search/index.html">Browsing Lists</a></li>
+        <li><a href="/Admin Report/index.html">Create Listing</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="/Admin Account/index.html">Account</a></li>
+        <li><a href="/Admin Log in/index.html">Log in</a></li>
+        <li><a href="/Admin Register/index.html">Register</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    lostandfounduniversityofphayao.com. All rights reserved. © 2025
+  </div>
+
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="admin-delete-modal">✕</div>
+  <div class="modal">
+    <img id="modalImg">
+    <div class="modal-body">
+      <div class="modal-title-row">
+        <h3 id="modalTitle"></h3>
+        <span id="modalStatus" class="status"></span>
+        <img src="/icons/marketing.png" class="report-icon"
+        onclick="event.stopPropagation(); openReport();">
+      </div>
+      <span class="category" id="modalCategory"></span>
+      <p class="desc" id="modalDesc"></p>
+
+
+      <div class="info"><img src="/icons/location.png">Found Place</div>
+      <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+      <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+     
+      
+      <div class="modal-types">
+        <h4>Contacts</h4>
+        <span class="status lost" id="status lost"></span>
+        <img
+          src="/icons/Favorite.png"
+          class="bookmark-icon"
+          id="modalBookmark"
+          onclick="toggleBookmark(event, this)"
+        > 
+        </div>
+      
+      <hr style="margin:1rem 0">
+      <h2>Choose atleast 1 to request contact</h2>
+
+      <div class="contacts">  
+        <label class="contact"><input type="checkbox"><img src="/icons/facebook.png">facebook.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/line.png">line.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/instagram.png">instagram.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/telegram.png">telegram.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/x.png">x.com</label>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary" style="cursor: pointer;">Request</button>
+        <button class="btn btn-cancel"style="cursor: pointer;" onclick="closeModal()" >Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= REPORT MODAL ================= -->
+<div class="modal-overlay" id="reportOverlay">
+  <div class="report-modal">
+    <div class="report-header">
+      <h3>Report</h3>
+      <button class="report-close" onclick="closeReport()">✕</button>
+    </div>
+
+    <div class="report-body">
+      <label><input type="checkbox"> Inappropriate</label>
+      <label><input type="checkbox"> False Information</label>
+      <label><input type="checkbox"> Sexual Content</label>
+      <label><input type="checkbox"> Hate Spreading</label>
+      <label><input type="checkbox"> Spam</label>
+      <label><input type="checkbox"> Others Reasons</label>
+    </div>
+
+    <div class="report-actions">
+      <button class="btn-report">Report</button>
+      <button class="btn-cancel" onclick="closeReport()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+<script src="/Admin Favorites/index.js"></script>
+</html>

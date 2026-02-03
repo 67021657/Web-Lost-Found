@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Register | Lost & Found – University of Phayao</title>
+<link rel="stylesheet" href="/Admin Register/index.css">
+
+
+
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="/icons/web icon.png">
+      <a href="/Admin Page/index.html">Lost & Found<br>University of Phayao</a>
+    </div>
+
+    <nav class="nav-links">
+      <div class="nav-item"><img src="/icons/checklist.png"><a href="/Admin Search/index.html">Browsing Lists</a></div>
+      <div class="nav-item"><img src="/icons/create-list.png"><a href="/Admin Report/index.html">Create Listing</a></div>
+      <div class="nav-item">
+        <img src="/icons/log-in.png"><a href="/Admin Log in/index.html">Log in</a>
+      </div>
+      <div class="icon-btn"><img src="/icons/internet.png"></div>
+      <div class="language">
+        <select><option>English</option><option>Thai</option></select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- REGISTER -->
+  <div class="card">
+    <div class="card-header">
+      <img src="/icons/add-user.png">
+      Create your account
+    </div>
+
+    <div class="form-grid">
+
+      <label>Name <span>*</span></label>
+      <input type="text" placeholder="Name">
+
+      <label>Email <span>*</span></label>
+      <div class="input-wrap">
+        <img src="/icons/mail.png">
+        <input class="input-icon" type="email" placeholder="Email Address">
+      </div>
+
+      <label>Password <span>*</span></label>
+      <div class="input-wrap">
+        <input
+          class="input-password"
+          type="password"
+          id="password"
+          placeholder="Password"
+        >
+        <img
+          class="toggle"
+          src="/icons/hidden.png"
+          data-target="password"
+        >
+      </div>
+
+
+      <label></label>
+      <div class="input-wrap">
+        <input
+          class="input-password"
+          type="password"
+          id="confirmPassword"
+          placeholder="Password Confirmation"
+        >
+        <img
+          class="toggle"
+          src="/icons/hidden.png"
+          data-target="confirmPassword"
+        >
+      </div>
+
+      <div class="hint">At least 8 characters</div>
+
+      <div class="terms">
+        <input type="checkbox">
+        <div class="text-terms">
+          <span>I have read and accept the <a href="/Admin Terns and Sevices/index.html">Terms and Conditions</a></span>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button class="btn-primary">Register</button>
+        <button class="btn-outline">Sign in</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- INFO -->
+  <aside class="info">
+    <div class="info-item">
+      <img src="/icons/photo.png">
+      <h3>Report Lost Items</h3>
+      <p>report item you found on University of Phayao to help people who lost it</p>
+    </div>
+
+    <div class="info-item">
+      <img src="/icons/search.png">
+      <h3>Find your item</h3>
+      <p>searching your lost item from report all over the University of Phayao</p>
+    </div>
+
+    <div class="info-item">
+      <img src="/icons/help.png">
+      <h3>Reunion item to owner</h3>
+      <p>help owner to find contact and make items easier to retrieve correctly</p>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-brand-title">
+        <img src="/icons/web icon.png" alt="logo">
+        <a href="/Admin Page/index.html">
+          <h2>Lost & Found<br>University of Phayao</h2>
+        </a>
+      </div>
+
+      <small>CONTACT US ON</small>
+
+      <div class="social">
+        <img src="/icons/gmail.png" alt="facebook">
+        <h1>Jiraphong.Kafae@gmail.com</h1>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="/Admin Terns and Sevices/index.html">Terms & Services</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="/Admin Page/index.html">Home Page</a></li>
+        <li><a href="/Admin Search/index.html">Browsing Lists</a></li>
+        <li><a href="/Admin Report/index.html">Create Listing</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="/Admin Account/index.html">Account</a></li>
+        <li><a href="/Admin Log in/index.html">Log in</a></li>
+        <li><a href="/Admin Register/index.html">Register</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    lostandfounduniversityofphayao.com. All rights reserved. © 2025
+  </div>
+
+</footer>
+
+</body>
+
+<script>
+document.querySelectorAll(".toggle").forEach(toggle => {
+  toggle.addEventListener("click", () => {
+    const inputId = toggle.dataset.target;
+    const input = document.getElementById(inputId);
+
+    const isHidden = input.type === "password";
+    input.type = isHidden ? "text" : "password";
+
+    toggle.src = isHidden
+      ? "/icons/hidden.png"     // 👁 แสดง
+      : "/icons/hidden.png"; // 🙈 ซ่อน
+  });
+});
+</script>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My Account | Lost & Found – University of Phayao</title>
+<link rel="stylesheet" href="/Admin Account/index.css">
+
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="/icons/web icon.png">
+      <a href="/Admin Page/index.html">Lost & Found<br>University of Phayao</a>
+    </div>
+
+    <nav class="nav-links">
+      <div class="nav-item"><img src="/icons/checklist.png"><a href="/Admin Search/index.html">Browsing Lists</a></div>
+      <div class="nav-item"><img src="/icons/create-list.png"><a href="/Admin Report/index.html">Create Listing</a></div>
+      <div class="nav-item">
+        <img src="/icons/log-in.png"><a href="/Admin Log in/index.html">Log in</a>
+      </div>
+      <div class="icon-btn"><img src="/icons/internet.png"></div>
+      <div class="language">
+        <select><option>English</option><option>Thai</option></select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+   <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h4>My Listings</h4>
+    <ul>
+      <li><img src="/icons/checklist.png"><a href="/Admin My Listings/index.html">My Listings</a></li>
+      <li><img src="/icons/bookmark.png"><a href="/Admin Favorites/index.html">Favorite Listings</a></li>
+      <li><img src="/icons/bell.png"><a href="/Admin Notification/index.html">Notifications</a></li>
+      <li><img src="/icons/stamp.png"><a href="/Admin Approve/index.html">Posts Approval</a></li>
+    </ul>
+
+    <h4>My Account</h4>
+    <ul>
+      <li class="active"><img src="/icons/user.png"><a href="/Admin Account/index.html">My Account</a></li>
+      <li><img src="/icons/logout.png"><a href="/Admin Log in/index.html">Log out</a></li>
+      <li><img src="/icons/cross.png"><a href="/Admin Close Account/index.html">Close Account</a></li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT -->
+  <section class="content">
+
+    <!-- PROFILE -->
+    <div class="profile">
+      <div class="profile-info">
+        <div class="avatar"></div>
+        <div>
+          <strong>Username</strong><br />
+          <small>someone@example.com</small>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div class="stat found">
+          <img src="/icons/megaphone.png"> 
+          <p>2 Found</p>
+        </div>
+        <div class="stat lost">
+          <img src="/icons/magnifier.png"> <p>5 Lost</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACCOUNT DETAILS -->
+    <div class="card">
+      <div class="card-header">
+        <img src="/icons/account.png"> Account Details
+      </div>
+
+      <div class="form-group">
+        <label>Name</label>
+        <input value="Name">
+      </div>
+
+      <div class="form-group">
+        <label>Username</label>
+        <div class="input-wrap">
+          <img src="/icons/account.png">
+          <input value="Username">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Gender</label>
+        <select>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Non-Binary</option>
+          <option>Perfer not to say</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <div class="input-wrap">
+          <img src="/icons/mail.png">
+          <input value="someone@example.com">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <div class="input-wrap">
+          <img src="/icons/phone.png">
+          <input>
+        </div>
+      </div>
+
+      <div class="actions"><button>Update</button></div>
+    </div>
+
+
+<!-- CONTACTS -->
+    <div class="card">
+      <div class="card-header">
+        <img src="/icons/contact-us.png"> Contacts
+      </div>
+      <p class="hint">Choose up to 3 to show to other people</p>
+
+      <div class="contacts-grid">
+        <div class="contact-row">
+          <input type="checkbox">
+          <img src="/icons/facebook.png">
+          <input type="text" placeholder="Facebook">
+        </div>
+
+        <div class="contact-row">
+          <input type="checkbox">
+          <img src="/icons/line.png">
+          <input type="text" placeholder="Line">
+        </div>
+
+        <div class="contact-row">
+          <input type="checkbox">
+          <img src="/icons/instagram.png">
+          <input type="text" placeholder="Instagram">
+        </div>
+
+        <div class="contact-row">
+          <input type="checkbox">
+          <img src="/icons/telegram.png">
+          <input type="text" placeholder="Telegram">
+        </div>
+
+        <div class="contact-row">
+          <input type="checkbox">
+          <img src="/icons/x.png">
+          <input type="text" placeholder="X (Twitter)">
+        </div>
+
+        <div class="contact-row">
+          <input type="checkbox">
+          <img src="/icons/snapchat.png">
+          <input type="text" placeholder="Snapchat">
+        </div>
+      </div>
+
+      <div class="actions"><button>Update</button></div>
+    </div>
+
+      <!-- SECURITY -->
+    <div class="card">
+      <div class="card-header">
+        <img src="/icons/secure.png"> Security Setting
+      </div>
+
+      <div class="form-group">
+        <label>New Password</label>
+        <div class="input-wrap password-wrap">
+          <input type="password" class="password-field">
+          <img src="/icons/hidden.png" class="toggle-password">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Confirm Password</label>
+        <div class="input-wrap password-wrap">
+          <input type="password" class="password-field">
+          <img src="/icons/hidden.png" class="toggle-password">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Current Password</label>
+        <div class="input-wrap password-wrap">
+          <input type="password" class="password-field">
+          <img src="/icons/hidden.png" class="toggle-password">
+        </div>
+      </div>
+
+    <div class="actions"><button>Update</button></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-brand-title">
+        <img src="/icons/web icon.png" alt="logo">
+        <a href="/Admin Page/index.html">
+          <h2>Lost & Found<br>University of Phayao</h2>
+        </a>
+      </div>
+
+      <small>CONTACT US ON</small>
+
+      <div class="social">
+        <img src="/icons/gmail.png" alt="facebook">
+        <h1>Jiraphong.Kafae@gmail.com</h1>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="/Admin Terns and Sevices/index.html">Terms & Services</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="/Admin Page/index.html">Home Page</a></li>
+        <li><a href="/Admin Search/index.html">Browsing Lists</a></li>
+        <li><a href="/Admin Report/index.html">Create Listing</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="/Admin Account/index.html">Account</a></li>
+        <li><a href="/Admin Log in/index.html">Log in</a></li>
+        <li><a href="/Admin Register/index.html">Register</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    lostandfounduniversityofphayao.com. All rights reserved. © 2025
+  </div>
+
+</footer>
+
+</body>
+
+<script src="/Admin Account/index.js"></script>
+</html>
+    

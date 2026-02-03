@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Listings | Lost & Found – University of Phayao</title>
+
+<style>
+:root {
+  --primary:#7fc59a;
+  --dark:#1f2937;
+  --muted:#6b7280;
+  --bg:#f9fafb;
+  --white:#ffffff;
+  --border:#d1d5db;
+  --lost:#ef4444;
+  --found:#22c55e;
+  --progress:#f59e0b;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--dark);
+}
+
+a{text-decoration:none;color:inherit}
+
+/* ===== HEADER ===== */
+header{
+  background:#fff;
+  border-bottom:1px solid var(--border);
+  box-shadow:0 2px 6px rgba(0,0,0,.05);
+  position:sticky;
+  top:0;
+  z-index:10;
+}
+
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:.8rem 1.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  font-size:1rem;
+}
+.logo img{width:60px}
+
+.nav-links{
+  display:flex;
+  align-items:center;
+  gap:1.6rem;
+  font-size:.95rem;
+}
+
+.nav-item{
+  display:flex;
+  align-items:center;
+  gap:.45rem;
+  cursor:pointer;
+}
+.nav-item img{width:20px}
+
+.icon-btn{
+  background:var(--primary);
+  padding:.35rem;
+  border-radius:8px;
+  margin-left: -0.5rem;
+}
+
+.icon-btn img{
+  margin-top: 0.1rem;
+  width: 18px;
+  height: 18px;
+}
+
+.arrow img{width:18px}
+
+.language select {
+  width:100%;
+  padding:.65rem .7rem;
+  border-radius:6px;
+  border:1px solid var(--border);
+}
+
+
+/* ===== Layout ===== */
+.container{
+  max-width:1200px;
+  margin:2rem auto 3rem;
+  padding:0 1.5rem;
+  display:grid;
+  grid-template-columns:260px 1fr;
+  gap:2rem;
+}
+
+/* ===== Sidebar ===== */
+.sidebar{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1.2rem;
+}
+.sidebar h4{
+  font-size:.75rem;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:.5rem;
+}
+.sidebar ul{
+  list-style:none;
+  margin-bottom:1.4rem;
+}
+.sidebar li{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  padding:.6rem .7rem;
+  border-radius:6px;
+  font-size:.9rem;
+  cursor:pointer;
+}
+.sidebar li img{width:18px}
+.sidebar li.active{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* ===== Main Card ===== */
+.main-card{
+  background:#fff;
+  border:1px solid var(--border);
+  border-radius:10px;
+  padding:1.2rem;
+}
+
+.main-card h1 {
+  font-size: 1.3rem;
+  margin-right: 38rem;
+  font-family: Abhaya Libre ExtraBold;
+}
+
+.main-card img {
+  width: 25px;
+  height: 25px;
+  margin-left: 1rem;
+}
+
+.main-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #e5e7eb;
+  padding-bottom:.8rem;
+  margin-bottom:1rem;
+  font-weight:600;
+}
+
+.toolbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:1rem;
+  font-size:.85rem;
+}
+
+.toolbar img {
+  width: 18px;
+  height: 18px;
+}
+
+.toolbar-left{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+}
+
+.toolbar-right input{
+  padding:.4rem .6rem;
+  border:1px solid var(--border);
+  border-radius:6px;
+}
+
+/* ===== Grid ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:1.2rem;
+}
+
+/* ===== CARD ===== */
+.card{
+  position:relative;
+  background:#fff;
+  border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.06);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+}
+
+.card-img{height:200px}
+.card-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.card-body{
+  padding:1.2rem 1.2rem 2.4rem;
+  display:flex;
+  flex-direction:column;
+  gap:.4rem;
+}
+
+/* title + status */
+.title-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:.6rem;
+}
+.title-row h3{font-size:1.05rem;font-weight:600}
+
+.status-row{
+  display:flex;
+  align-items:center;
+  gap:.35rem;
+}
+
+.status{
+  padding:.25rem .7rem;
+  border-radius:999px;
+  font-size:.75rem;
+  color:#fff;
+}
+.lost{background:var(--lost)}
+.found{background:var(--found)}
+.progress{background:var(--progress)}
+
+.report-icon{
+  width:16  px;
+  opacity:.75;
+  cursor:pointer;
+}
+
+/* meta */
+.category{
+  background:#f3f4f6;
+  padding:.25rem .6rem;
+  border-radius:999px;
+  font-size:.75rem;
+  width:max-content;
+}
+.desc{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+.info{
+  display:flex;
+  align-items:center;
+  gap:.45rem;
+  font-size:.8rem;
+  color:var(--muted);
+}
+.info img{
+  width:14px;
+  height: 14px;
+} 
+
+.price{
+  margin-top:.4rem;
+  font-weight:700;
+}
+
+/* bookmark */
+.bookmark{
+  position:absolute;
+  bottom:14px;
+  right:14px;
+}
+.bookmark img{
+  width: 18px;
+  height: 18px;
+  opacity:.7;
+}
+
+/* ===== Pagination ===== */
+.pagination{
+  display:flex;
+  justify-content:center;
+  gap:.4rem;
+  margin-top:2rem;
+  cursor: pointer;
+}
+
+.page{
+  width:32px;
+  height:32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  border:1px solid var(--border);
+  font-size:.8rem;
+}
+.page.active{
+  background:var(--primary);
+  color:#fff;
+  border-color:var(--primary);
+}
+/* ===== FOOTER ===== */
+.footer {
+  background: #fff;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 4rem;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.footer small {
+  margin-bottom: -0.5rem;
+}
+
+/* Left brand */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-brand-title {
+  display: flex;
+  align-items: center;
+  gap: .8rem;
+}
+
+.footer-brand-title img {
+  width: 56px;
+  height: 56px;
+}
+
+.footer-brand-title h2 {
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.footer-brand small {
+  color: #6b7280;
+}
+
+/* Social */
+.social {
+  display: flex;
+  gap: .6rem;
+}
+
+.social img {
+  width: 28px;
+  height: 28px;
+}
+
+.social h1 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 0.1rem;
+  margin-left: 0.4rem;
+}
+
+
+
+/* Footer columns */
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: .8rem;
+}
+
+
+.footer-col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.footer-col li {
+  font-size: .9rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.footer-col li:hover {
+  color: #111827;
+}
+
+/* Divider */
+.footer-divider {
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Copyright */
+.footer-bottom {
+  text-align: center;
+  padding: 1rem;
+  font-size: .85rem;
+  color: #6b7280;
+}
+
+/* ===== MODAL ===== */
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.6);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+.modal-overlay.active{display:flex}
+
+.modal{
+  background:#fff;
+  width:420px;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 30px 60px rgba(0,0,0,.3);
+}
+
+
+.modal img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+}
+
+.modal .info {
+  margin-bottom: 0.5rem;
+}
+
+.modal .info img {
+  width: 18px;
+  height: 18px;
+
+}
+
+.modal-body{
+  padding:1.4rem;
+}
+
+.modal-body span {
+  margin-bottom: 1rem; 
+}
+
+.modal-body p{
+  margin-top: 1rem;
+  margin-bottom: 1rem;  
+}
+
+
+.modal-title-row{
+  display:flex;
+  justify-content:space-between;
+}
+
+.modal-title-row img {
+  width: 25px;
+  height: 25px;
+}
+
+
+.modal-title-row .status {
+  margin-left: 10rem;
+}
+
+
+.modal .contacts img {
+  width: 18px;
+  height: 18px;
+  margin-left: 1rem;
+  margin-right: 0.5rem;
+}
+
+.modal h4 {
+  margin-bottom: -0.5rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.modal h2 {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+  margin-top: -0.8rem;
+  font-weight: 500;
+  color:#9ca3af;
+}
+
+.modal-body .modal-types {
+    display: flex;
+    margin-bottom: -1rem;
+}
+
+.modal .types {
+  margin-left: 10rem;
+  margin-top: 1rem;
+  width: 4rem;
+  padding:.05rem .05rem;
+  border-radius:6px;
+  border:1px solid var(--border);
+}
+
+.modal .modal-types img {
+  width: 30px;
+  height: 30px;
+  margin-left: 1rem;
+  margin-top: 1rem;
+}
+
+.modal .modal-types span {
+  margin-left: 11rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+.contacts{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.4rem;
+  font-size:.85rem;
+}
+.modal-actions{
+  display:flex;
+  gap:.6rem;
+  margin-top:1rem;
+}
+.btn{
+  flex:1;
+  border:none;
+  padding:.6rem;
+  border-radius:999px;
+  font-weight:600;
+}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-cancel{background:#000;color:#fff}
+
+/* ================= REPORT MODAL ================= */
+.report-modal{
+  background:#fff;
+  width:360px;
+  border-radius:12px;
+  padding:1rem 1.2rem;
+  box-shadow:0 20px 40px rgba(0,0,0,.25);
+}
+
+.report-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid var(--border);
+  padding-bottom:.4rem;
+}
+
+.report-close{
+  background:#ef4444;
+  color:#fff;
+  border:none;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.report-body{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:.5rem 1rem;
+  margin-top:.8rem;
+  font-size:.85rem;
+}
+
+.report-actions{
+  display:flex;
+  gap:.6rem;
+  margin-top:1rem;
+}
+
+
+
+.btn-report{
+  flex:1;
+  background:#ef4444;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  padding:.5rem;
+}
+
+.btn-cancel{
+  flex:1;
+  background:#000000;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  padding:.5rem;
+}
+
+.bookmark-icon{
+  cursor:pointer;
+  transition:transform .15s ease;
+}
+
+.bookmark-icon:active{
+  transform:scale(1.2);
+}
+
+/* ===== Responsive ===== */
+@media(max-width:900px){
+  .container{grid-template-columns:1fr}
+}
+
+@media (max-width: 1024px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">
+      <img src="/icons/web icon.png">
+      <a href="/Landing Page/index 1.html">Lost & Found<br>University of Phayao</a>
+    </div>
+
+    <nav class="nav-links">
+      <div class="nav-item"><img src="/icons/checklist.png"><a href="/Search/index.html">Browsing Lists</a></div>
+      <div class="nav-item"><img src="/icons/create-list.png"><a href="/Report/index.html">Create Listing</a></div>
+      <div class="nav-item">
+        <img src="/icons/log-in.png"><a href="/Log in/index.html">Log in</a>
+      </div>
+      <div class="icon-btn"><img src="/icons/internet.png"></div>
+      <div class="language">
+        <select><option>English</option><option>Thai</option></select>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+   <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h4>My Listings</h4>
+    <ul>
+      <li><img src="/icons/checklist.png"><a href="/My Listings/index.html">My Listings</a></li>
+      <li class="active"><img src="/icons/bookmark.png"><a href="/Favorites/index.html">Favorite Listings</a></li>
+      <li><img src="/icons/bell.png"><a href="/Notification/index.html">Notifications</a></li>
+    </ul>
+
+    <h4>My Account</h4>
+    <ul>
+      <li><img src="/icons/user.png"><a href="/Account/index.html">My Account</a></li>
+      <li><img src="/icons/logout.png"><a href="/Log in/index.html">Log out</a></li>
+      <li><img src="/icons/cross.png"><a href="/Close Account/index.html">Close Account</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <section class="main-card">
+    <div class="main-header">
+      <img src="/icons/megaphone.png" alt="">
+      <h1>
+          Favorite Listings
+      </h1>
+    </div>
+
+    <div class="toolbar">
+      <div class="toolbar-left">
+        <label><input type="checkbox"> Select All</label>
+        <img src="/icons/bin.png" alt="">
+        <span style="cursor: pointer;">Delete</span>
+      </div>
+      <div class="toolbar-right">
+        Search <input type="text">
+      </div>
+    </div>
+
+    <div class="grid">
+
+      <!-- CARD -->
+    <div class="card" data-id="item-1" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/Favorite.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+      <!-- CARD -->
+    <div class="card" data-id="item-2" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/Favorite.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+      <!-- CARD -->
+    <div class="card" data-id="item-3" onclick="openModal(this)">
+      <div class="card-img">
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f">
+      </div>
+
+      <div class="card-body">
+        <div class="title-row">
+          <h3>My Yeti Cup</h3>
+          <div class="status-row">
+            <span class="status lost">Lost</span>
+            <img class="report-icon" src="/icons/marketing.png">
+          </div>
+        </div>
+
+        <span class="category">Personal Items</span>
+        <p class="desc">Lost near the main library on campus. Black case with a small crack...</p>
+
+        <div class="info"><img src="/icons/location.png">Found Place</div>
+        <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+        <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+        <div class="price">550 BATH</div>
+      </div>
+
+      <div class="bookmark">
+        <img
+          src="/icons/Favorite.png"
+          class="bookmark-icon"
+          onclick="toggleBookmark(event, this)"
+        >
+      </div>
+    </div>
+
+    </div>
+
+    <div class="pagination">
+      <div class="page active" onclick="goPage(1)">1</div>
+      <div class="page" onclick="goPage(2)">2</div>
+      <div class="page" onclick="goPage(3)">3</div>
+      <div class="page" onclick="goPage(4)">4</div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- Brand -->
+    <div class="footer-brand">
+      <div class="footer-brand-title">
+        <img src="/icons/web icon.png" alt="logo">
+        <a href="/Landing Page/index 1.html">
+          <h2>Lost & Found<br>University of Phayao</h2>
+        </a>
+      </div>
+
+      <small>CONTACT US ON</small>
+
+      <div class="social">
+        <img src="/icons/gmail.png" alt="facebook">
+        <h1>Jiraphong.Kafae@gmail.com</h1>
+      </div>
+    </div>
+
+    <!-- About -->
+    <div class="footer-col">
+      <h4>About us</h4>
+      <ul>
+        <li><a href="/Terns and Sevices/index.html">Terms & Services</a></li>
+      </ul>
+    </div>
+
+   <div class="footer-col">
+      <h4>Contents</h4>
+      <ul>
+        <li><a href="/Landing Page/index 1.html">Home Page</a></li>
+        <li><a href="/Search/index.html">Browsing Lists</a></li>
+        <li><a href="/Report/index.html">Create Listing</a></li>
+      </ul>
+    </div>
+
+    <!-- Account -->
+    <div class="footer-col">
+      <h4>My Account</h4>
+      <ul>
+        <li><a href="/Account/index.html">Account</a></li>
+        <li><a href="/Log in/index.html">Log in</a></li>
+        <li><a href="/Register/index.html">Register</a></li>
+      </ul>
+    </div>
+
+
+  </div>
+
+  <div class="footer-divider"></div>
+
+  <div class="footer-bottom">
+    lostandfounduniversityofphayao.com. All rights reserved. © 2025
+  </div>
+
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal">
+    <img id="modalImg">
+    <div class="modal-body">
+      <div class="modal-title-row">
+        <h3 id="modalTitle"></h3>
+        <span id="modalStatus" class="status"></span>
+        <img src="/icons/marketing.png" class="report-icon"
+        onclick="event.stopPropagation(); openReport();">
+      </div>
+      <span class="category" id="modalCategory"></span>
+      <p class="desc" id="modalDesc"></p>
+
+
+      <div class="info"><img src="/icons/location.png">Found Place</div>
+      <div class="info"><img src="/icons/calendar.png">Day/Month/Year</div>
+      <div class="info"><img src="/icons/mail.png">someone@email.com</div>
+
+     
+      
+      <div class="modal-types">
+        <h4>Contacts</h4>
+        <span class="status lost" id="status lost"></span>
+        <img
+          src="/icons/Favorite.png"
+          class="bookmark-icon"
+          id="modalBookmark"
+          onclick="toggleBookmark(event, this)"
+        > 
+        </div>
+      
+      <hr style="margin:1rem 0">
+      <h2>Choose atleast 1 to request contact</h2>
+
+      <div class="contacts">
+        <label class="contact"><input type="checkbox"><img src="/icons/facebook.png">facebook.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/line.png">line.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/instagram.png">instagram.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/telegram.png">telegram.com</label>
+        <label class="contact"><input type="checkbox"><img src="/icons/x.png">x.com</label>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-primary" style="cursor: pointer;">Request</button>
+        <button class="btn btn-cancel"style="cursor: pointer;" onclick="closeModal()" >Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= REPORT MODAL ================= -->
+<div class="modal-overlay" id="reportOverlay">
+  <div class="report-modal">
+    <div class="report-header">
+      <h3>Report</h3>
+      <button class="report-close" onclick="closeReport()">✕</button>
+    </div>
+
+    <div class="report-body">
+      <label><input type="checkbox"> Inappropriate</label>
+      <label><input type="checkbox"> False Information</label>
+      <label><input type="checkbox"> Sexual Content</label>
+      <label><input type="checkbox"> Hate Spreading</label>
+      <label><input type="checkbox"> Spam</label>
+      <label><input type="checkbox"> Others Reasons</label>
+    </div>
+
+    <div class="report-actions">
+      <button class="btn-report">Report</button>
+      <button class="btn-cancel" onclick="closeReport()">Cancel</button>
+    </div>
+  </div>
+</div>
+<script>
+let currentCardId = null;
+
+/* ===== OPEN MODAL ===== */
+function openModal(card){
+  currentCardId = card.dataset.id;
+
+  document.getElementById("modalOverlay").classList.add("active");
+
+  document.getElementById("modalImg").src =
+    card.querySelector(".card-img img").src;
+
+  document.getElementById("modalTitle").innerText =
+    card.querySelector("h3").innerText;
+
+  const status = card.querySelector(".status");
+  const modalStatus = document.getElementById("modalStatus");
+  modalStatus.innerText = status.innerText;
+  modalStatus.className = "status " + status.classList[1];
+
+  document.getElementById("modalCategory").innerText =
+    card.querySelector(".category").innerText;
+
+  document.getElementById("modalDesc").innerText =
+    card.querySelector(".desc").innerText;
+
+  document.getElementById("status lost").innerText =
+    status.innerText;
+
+  syncModalBookmark();
+}
+
+/* ===== BOOKMARK TOGGLE ===== */
+function toggleBookmark(event, img){
+  event.stopPropagation();
+
+  const cardId = currentCardId || img.closest(".card")?.dataset.id;
+  if(!cardId) return;
+
+  const key = "bookmark_" + cardId;
+  const isSaved = localStorage.getItem(key) === "true";
+
+  localStorage.setItem(key, !isSaved);
+
+  updateBookmarkUI(cardId);
+}
+
+/* ===== UPDATE UI ===== */
+function updateBookmarkUI(cardId){
+  const isSaved = localStorage.getItem("bookmark_" + cardId) === "true";
+  const icon = isSaved ? "/icons/bookmark.png" : "/icons/favorite.png";
+
+  // update card
+  const card = document.querySelector(`.card[data-id="${cardId}"]`);
+  if(card){
+    const img = card.querySelector(".bookmark-icon");
+    if(img) img.src = icon;
+  }
+
+  // update modal
+  const modalIcon = document.getElementById("modalBookmark");
+  if(modalIcon) modalIcon.src = icon;
+}
+
+/* ===== SYNC MODAL WHEN OPEN ===== */
+function syncModalBookmark(){
+  if(currentCardId){
+    updateBookmarkUI(currentCardId);
+  }
+}
+
+/* ===== INIT ON PAGE LOAD ===== */
+window.addEventListener("DOMContentLoaded",()=>{
+  document.querySelectorAll(".card").forEach(card=>{
+    updateBookmarkUI(card.dataset.id);
+  });
+});
+
+/* ===== CLOSE MODAL ===== */
+function closeModal(){
+  document.getElementById("modalOverlay").classList.remove("active");
+}
+
+document.getElementById("modalOverlay").addEventListener("click",e=>{
+  if(e.target.id==="modalOverlay") closeModal();
+});
+
+function openReport(){
+  document.getElementById("reportOverlay").classList.add("active");
+}
+
+function closeReport(){
+  document.getElementById("reportOverlay").classList.remove("active");
+}
+
+</script>
+
+
+
+<script>
+const ITEMS_PER_PAGE = 6; // 3 คอลัมน์ x 2 แถว
+let currentPage = 1;
+
+function goPage(page){
+  currentPage = page;
+
+  const cards = document.querySelectorAll(".card");
+  const start = (page - 1) * ITEMS_PER_PAGE;
+  const end = start + ITEMS_PER_PAGE;
+
+  cards.forEach((card, index) => {
+    card.style.display =
+      index >= start && index < end ? "flex" : "none";
+  });
+
+  updatePaginationUI(page);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function updatePaginationUI(page){
+  document.querySelectorAll(".page").forEach(p=>{
+    p.classList.remove("active");
+    if(Number(p.innerText) === page){
+      p.classList.add("active");
+    }
+  });
+}
+
+// init
+document.addEventListener("DOMContentLoaded",()=>{
+  goPage(1);
+});
+</script>
+</body>
+</html>
